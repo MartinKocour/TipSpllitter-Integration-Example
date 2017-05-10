@@ -5,8 +5,6 @@ import android.provider.BaseColumns;
 import android.support.annotation.NonNull;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author Martin Kocour
@@ -30,18 +28,6 @@ public class TipSplitterContract {
         public static final String COL_DELETED = "deleted";
         public static final String COL_CREATED = "created";
         public static final String COL_UPDATED = "updated";
-
-        static final Map<String, String> ALIAS_NAMES = new HashMap<String, String>() {{
-            put(COL_ID, "payment._id");
-            put(COL_AMOUNT, "payment.amount");
-            put(COL_TIP, "payment.tip");
-            put(COL_SPENDING, "payment.spending");
-            put(COL_EMPLOYEE_ID, "payment.employee");
-            put(COL_EMPLOYEE_NAME, "employee.name");
-            put(COL_CREATED, "*.created");
-            put(COL_DELETED, "*.deleted");
-            put(COL_UPDATED, "*.updated");
-        }};
 
         public static ContentValues createDefault(boolean inserted) {
             ContentValues values = new ContentValues();
